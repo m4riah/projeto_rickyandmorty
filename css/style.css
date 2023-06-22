@@ -1,19 +1,72 @@
 body {
+    margin: 0;
+    height: 0;
     background-color: black;
 }
-
-header {
-    height: 100vh; /* Define a altura do header para ocupar toda a altura da viewport */
+ 
+ 
+ header {
+    height: 20vh; 
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-}
+ }
 
 .img-logo {
-    margin-top: 10px; /* Espaçamento opcional do topo */
+    margin-top: 10px;
+    z-index: 2;
+} 
+
+ .logo {
+    width: 52vh;
+} 
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    height: 100%;
+    
 }
 
-.logo {
-    width: 50vh;
+.card {
+    position: relative;
+    width: 250px;
+    height: auto;
+    background-color: rgba(236, 236, 236, 0.897);
+    border-radius: 15px;
+    margin-top: 30px;
+    margin-left: 50px;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
 }
 
+.card:hover {
+    transform: scale(1.01);
+    transition: all 0.4s;
+    box-shadow: 0 0 20px rgb(8, 255, 28);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+
+.card strong {
+    font-family: 'Staatliches', cursive;
+    font-size: 25px;
+}
+
+.card span {
+    font-family: 'Patua One', cursive;
+    color: #10adc5dc;
+}
+
+.card p {
+    font-family: 'Jost', sans-serif;
+    color: rgb(65, 65, 65);
+
+}
