@@ -13,10 +13,6 @@ fetch(' https://rickandmortyapi.com/api/character', {
             <strong> ` + results.name + ` </strong><br>
             <span> ` + results.species +` </span><br>
             <p> ` + results.status + ` </p>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
             </div>
             `;
     })
