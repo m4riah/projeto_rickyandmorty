@@ -10,9 +10,11 @@ fetch('https://rickandmortyapi.com/api/character/' + id, {
     var characterDetails = document.querySelector('.character-details');
 
     characterDetails.innerHTML = `
-    <div class= "card"> 
+    <div class= "card-img">
+    <img src=` + data.image + ` >
+    </div>
+    <div class= "info"> 
       <h1> `+ data.name + ` </h1>
-      <img src=` + data.image + ` >
       <p>Especie: ` + data.species + `</p>
       <p>Cidade: ` + data.location.name + `</p>
       <p>Genero: ` + data.gender + `</p>
@@ -20,4 +22,14 @@ fetch('https://rickandmortyapi.com/api/character/' + id, {
       </div>
     `;
   });
- 
+  
+//   var portal = document.querySelectorAll('.portal')
+//   portal.addEventListener('click', function() {
+//     var url = '/index.html';
+//     // Redireciona para a nova página com o ID específico
+//      window.location.href = url
+//   });
+
+ function redirectToPage() {
+    window.location.href = "/index.html";
+}

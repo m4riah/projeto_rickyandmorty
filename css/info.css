@@ -1,0 +1,146 @@
+body {
+    background-color: #000000;
+    flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.portal img {
+    width: 140px;
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 45vh;
+    display: flex;
+    float: right;
+    top: 30px;
+    right: 30px;
+} 
+
+.card-img {
+    width: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    transition-duration: .2s;
+    background: linear-gradient(0deg, #000, #272727);
+    position: absolute;
+    top: 32%;
+    right: 9%;
+}
+  
+.card-img:before, .card-img:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #7CF448, #04eeff, #00ff00,#26ff09, #A6F282, #3eedfa, 
+          #7CF448, #00ff00,#04eeff, #1adb00);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+}
+  
+@keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+  
+    50% {
+      background-position: 400% 0;
+    }
+  
+    100% {
+      background-position: 0 0;
+    }
+}
+  
+.card-img:after {
+    filter: blur(50px);
+}
+
+.card-img img {
+  width:100%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.lua {
+    position: relative;
+    top: 25px;
+}
+
+.lua img {
+    width: 150px;
+    animation: float 8s ease-in-out infinite;
+}
+
+
+@keyframes float{
+	0%,100%{
+		transform:translatey(0)
+	}
+	50%{
+		transform:translatey(-20px)
+	}
+}
+
+
+.terra {
+    position: absolute;
+    bottom: 16px;
+    left: 100px;
+}
+
+.terra img {
+    width: 140px;
+    animation: float-terra 8s ease-in-out infinite;
+}
+
+@keyframes float-terra {
+    0%,100%{
+		transform:translatey(-20px)
+	}
+	50%{
+		transform:translatey(0)
+	}
+}
+
+.info {
+    width: 420px;
+    background-color: rgba(223, 223, 223, 0.918);
+    float: left;
+    margin-left: 210px;
+    position: relative;
+    top: 20vh;
+    padding: 0 15px 15px 100px;
+    border-radius: 25px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.info:hover {
+    transform: scale(1.01);
+    transition: all 0.6s;
+    box-shadow: 0 0 20px rgb(189, 189, 189);
+}
+  
+.info h1 {
+    font-family: 'Staatliches', cursive;
+    color: #10adc5dc;
+    font-size: 55px;
+}
+
+.info p {
+    color: #161616;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 19px;
+}
