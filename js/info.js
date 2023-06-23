@@ -23,13 +23,6 @@ fetch('https://rickandmortyapi.com/api/character/' + id, {
     `;
   });
   
-//   var portal = document.querySelectorAll('.portal')
-//   portal.addEventListener('click', function() {
-//     var url = '/index.html';
-//     // Redireciona para a nova página com o ID específico
-//      window.location.href = url
-//   });
-
  function redirectToPage() {
     window.location.href = "/index.html";
 }

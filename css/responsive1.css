@@ -1,0 +1,26 @@
+@media screen and (max-width: 767px) {
+    header {
+        height: 10vh; 
+    }
+  
+    .logo {
+        width: 70vw;
+    }
+  
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .card {
+        width: 70px;
+        margin: 20px auto;
+    }
+
+    .card strong {
+        font-size: 10px;
+    }
+
+    .card span {
+        font-size: 8px;
+    }
+}

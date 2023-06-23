@@ -1,0 +1,46 @@
+/* Estilos para telas pequenas */
+@media screen and (max-width: 767px) {
+    body {
+      flex-direction: column;
+    }
+  
+    .logo {
+      width: 70vw;
+      top: 20px;
+      right: 20px;
+    }
+  
+    .card-img {
+        width: 150px;
+        order: 1; /* Altera a ordem para 1 para que fique acima do .info */
+        margin: 0 auto;
+    }
+  
+    .info {
+        width: 50%;
+        padding: 0 15px;
+        margin-top: 20px;
+        margin: 0 auto;
+        order: 2;
+    }
+
+    .info h1 {
+        font-size: 20px;
+    }
+
+    .info p {
+        font-size: 12px;
+    }
+
+    .lua {
+        width: 50px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .terra {
+        width: 35px;
+        display: block;
+    }
+  }
+  

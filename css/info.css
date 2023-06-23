@@ -5,6 +5,11 @@ body {
     justify-content: center;
 }
 
+.portal {
+    position: relative;
+    z-index: 1;
+}
+
 .portal img {
     width: 140px;
     margin-top: 3px;
