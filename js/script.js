@@ -9,12 +9,24 @@ fetch(' https://rickandmortyapi.com/api/character', {
     json.results.map(function(results){
 
         container.innerHTML+=`
-            <div class= "card"><img src= ` + results.image +`> 
+            <div class= "card" data-id= ` + results.id + `>
+            <img src= ` + results.image +`> 
             <strong> ` + results.name + ` </strong><br>
             <span> ` + results.species +` </span><br>
-            <p> ` + results.status + ` </p>
             </div>
             `;
+
     })
     
+    // Adiciona o evento de clique para os cards
+    var cards = document.querySelectorAll('.card');
+    cards.forEach(function(card) {
+      card.addEventListener('click', function() {
+        var id = card.getAttribute('data-id');
+        var url = 'info.html?id=' + id;
+        // Redireciona para a nova página com o ID específico
+         window.location.href = url
+      });
+    });
+
 })
